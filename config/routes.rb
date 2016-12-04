@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  root 'riders#index'
 
   resources :earnings do
     member do
