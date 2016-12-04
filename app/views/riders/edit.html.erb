@@ -1,0 +1,18 @@
+<% @page_title = "Edit Rider" %>
+
+<br />
+<%= link_to("<< Back to list", riders_path, :class => 'back-link') %>
+<br />
+
+<div class="riders edit">
+  <h1>Update Riders</h1>
+
+  <%= form_for(@rider) do |f| %>
+
+  <%= render( :partial => 'form', :locals => { :f => f }) %>
+
+  <div class="form-buttons">
+    <%= f.submit("Update rider") %>
+  </div>
+  <% end %>
+</div>

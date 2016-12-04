@@ -1,0 +1,35 @@
+<% @page_title = "Rider Profile #{@rider.first_name}" %>
+
+<%= link_to("<< Back to List", riders_path, :class => 'back-link') %>
+
+<div class="rider profile">
+  <h2>Rider Profile</h2>
+
+  <table summary="Rider profile">
+    <tr>
+      <th>First Name</th>
+      <td><%= @rider.first_name %></td>
+    </tr>
+    <tr>
+      <th>Last Name</th>
+      <td><%= @rider.last_name %></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td><%= @rider.email %></td>
+    </tr>
+    <tr>
+      <th>City</th>
+      <td><%= @rider.city %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @rider.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @rider.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

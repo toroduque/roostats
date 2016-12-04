@@ -1,0 +1,36 @@
+<% @page_title = "Earnings History"  %>
+
+<%= link_to("<< Back to main menu", riders_path) %> <br>
+
+<div class="earnings index">
+  <h2>All Riders</h2>
+
+  <%= link_to("Add New Earning", new_earning_path(:rider_id => @rider.id)) %>
+
+  <table class="table" summary="Earnings list">
+    <tr>
+      <th>Date</th>
+      <th>Worked Hours</th>
+      <th>Orders</th>
+      <th>Tips</th>
+      <th>Total</th>
+      <th>Avg Hour</th>
+      <th>Actions</th>
+    </tr>
+    <% @earnings.each do |earning| %>
+    <tr>
+      <td><%= earning.earnings_date %></td>
+      <td><%= earning.hours %></td>
+      <td><%= earning.orders %></td>
+      <td><%= earning.tips %></td>
+      <td><%= (earning.hours * 16) + (earning.orders * 2.5) + (earning.tips) %></td>
+      <td><%= ((earning.hours * 16) + (earning.orders * 2.5) + (earning.tips)) / earning.hours %></td>
+      <td>
+        <%= link_to("Edit", edit_earning_path(earning, :rider_id => @rider.id), :class => 'action edit') %>
+        <%= link_to("Delete", delete_earning_path(earning, :rider_id => @rider.id), :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+
+</div>

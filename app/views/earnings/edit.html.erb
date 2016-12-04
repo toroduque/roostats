@@ -1,0 +1,18 @@
+<% @page_title = "Edit Record" %>
+
+<br />
+<%= link_to("<< Back to list", earnings_path(:rider_id => @rider.id), :class => 'back-link') %>
+<br />
+
+<div>
+  <h1>Update Record</h1>
+
+  <%= form_for(@earning, :url => earning_path(@earning, :rider_id => @rider.id), :class => 'form-group') do |f| %>
+
+  <%= render( :partial => 'form', :locals => { :f => f }) %>
+
+  <div class="form-buttons">
+    <%= f.submit("Update record") %>
+  </div>
+  <% end %>
+</div>

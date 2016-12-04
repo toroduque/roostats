@@ -1,0 +1,64 @@
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+ // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+ @import url('https://fonts.googleapis.com/css?family=Muli');
+
+ body {
+   font-family: 'Source Sans Pro', Arial, sans-serif;
+ }
+
+ h1,h2,h3,h4,h5,h6 {
+   font-family: 'Muli', Arial, sans-serif;
+ }
+
+ .navbar-default  {
+   color: #ffffff;
+   background: linear-gradient(to right, #FF0059, #9C2BB0);
+ }
+
+ .navbar-default .navbar-brand {
+   color: #ffffff;
+   font-weight: bold;
+   letter-spacing: 2px;
+ }
+
+  .navbar-default .navbar-nav > li > a {
+   color: #ffffff;
+ }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.form-background {
+  margin: 5px;
+  padding: 7px;
+  background: linear-gradient(to right, #FF0059, #9C2BB0);
+}
+
+.form-main {
+  background-color: #ffffff;
+  padding: 30px;
+}
+
+.save-button {
+  background-color: #ffffff;
+  border: solid 1px #FF0059;
+}

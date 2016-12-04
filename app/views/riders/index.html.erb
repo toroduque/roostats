@@ -1,0 +1,40 @@
+<% @page_title = "All Riders"  %>
+
+<%= link_to("<< Back to main menu",'#') %> <br>
+
+<div class="riders index">
+  <h2>All Riders</h2>
+
+  <%= link_to("Add New Rider", new_rider_path) %>
+
+  <table class="table" summary="Rider list">
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>City</th>
+      <th>Vehicle</th>
+      <th>Contract Type</th>
+      <th>Actions</th>
+    </tr>
+    <% @riders.each do |rider| %>
+    <tr>
+      <td><%= rider.id %></td>
+      <td><%= rider.first_name %></td>
+      <td><%= rider.last_name %></td>
+      <td><%= rider.email %></td>
+      <td><%= rider.city %></td>
+      <td><%= rider.contract.vehicle %></td>
+      <td><%= rider.contract.contract_type%></td>
+      <td>
+        <%= link_to("View Earnings", earnings_path(:rider_id => rider.id), :class => 'action show') %>
+        <%= link_to("Profile", profile_rider_path(rider), :class => 'action show') %>
+        <%= link_to("Edit", edit_rider_path(rider), :class => 'action edit') %>
+        <%= link_to("Delete", delete_rider_path(rider), :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+
+</div>

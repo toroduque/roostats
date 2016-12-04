@@ -1,0 +1,23 @@
+<% @page_title = "Delete Rider" %>
+
+<br />
+<%= link_to("<< Back to list", earnings_path(:rider_id => @rider.id), :class => 'back-link') %>
+<br />
+
+<div class="rider delete">
+  <h2>Delete Record</h2>
+
+  <%= form_for(@earning, :url => earning_path(@earning, :rider_id => @rider.id), :method => 'delete') do |f| %>
+
+    <p>
+      Are you sure you want to permanently delete this record?
+    </p>
+    <p class="reference-name">
+      <%= f.object.earnings_date %>
+    </p>
+
+    <div class="form-buttons">
+      <%= f.submit("Delete Record") %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,23 @@
+<% @page_title = "Delete Rider" %>
+
+<br />
+<%= link_to("<< Back to list", riders_path, :class => 'back-link') %>
+<br />
+
+<div class="rider delete">
+  <h2>Delete Rider</h2>
+
+  <%= form_for(@rider, :method => 'delete') do |f| %>
+
+    <p>
+      Are you sure you want to permanently delete your account?
+    </p>
+    <p class="reference-name">
+      <%= f.object.first_name %>
+    </p>
+
+    <div class="form-buttons">
+      <%= f.submit("Delete Rider") %>
+    </div>
+  <% end %>
+</div>
