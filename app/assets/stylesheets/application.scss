@@ -16,35 +16,70 @@
  // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
  @import "bootstrap-sprockets";
  @import "bootstrap";
- @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
- @import url('https://fonts.googleapis.com/css?family=Muli');
+ @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
+ @import url('https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i');
 
  body {
    font-family: 'Source Sans Pro', Arial, sans-serif;
+
+   input[type="number"]::-webkit-outer-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+   }
+
+   input[type="number"]::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+   }
+
+   input[type="number"] {
+    -moz-appearance: textfield;
+   }
+
  }
 
  h1,h2,h3,h4,h5,h6 {
    font-family: 'Muli', Arial, sans-serif;
  }
 
- .navbar-default  {
-   color: #ffffff;
-   background: linear-gradient(to right, #FF0059, #9C2BB0);
+ .back-link {
+   color: #a4a4a4;
+
+   span {
+     font-size: 12px;
+   }
  }
 
- .navbar-default .navbar-brand {
-   color: #ffffff;
-   font-weight: bold;
-   letter-spacing: 2px;
- }
+.earnings-index{
 
-  .navbar-default .navbar-nav > li > a {
-   color: #ffffff;
- }
+  p {
+    border-top: 1px solid #c2c2c2;
+    border-bottom: 1px solid #c2c2c2;
+    color: #777575;
+    font-size: 16px;
+    padding: 15px 0px;
+    margin: 15px 0px;
+  }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  background-color: transparent;
-  color: #ffffff;
+  .add-new-record {
+    color: #777575;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+
+  table {
+    margin-top: 15px;
+    text-align: center;
+
+    th {
+      color: #8D8D8D;
+    }
+    td {
+      color: #545DF1;
+    }
+  }
+
 }
 
 .form-background {
@@ -55,10 +90,82 @@
 
 .form-main {
   background-color: #ffffff;
-  padding: 30px;
+  padding: 15px 30px;
+
+  p {
+    border-bottom: 1px solid #c2c2c2;
+    color: #777575;
+    font-size: 16px;
+    padding-bottom: 15px;
+    margin-bottom: 45px;
+  }
+
+  label {
+    color: #a3a3a3;
+    font-weight: normal;
+    font-family: 'Muli', Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  input[type="number"], input[type="date"] {
+    border: 1px solid #ffffff;
+    border-bottom: 1px solid #AB25A2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 15px 1px;
+  }
+}
+
+.navbar-default  {
+  color: #ffffff;
+  background: linear-gradient(to right, #FF0059, #9C2BB0);
+}
+
+.navbar-default .navbar-brand {
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+ .navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-toggle {
+   border: none;
+   border-radius: 0;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+    background-color: rgba(255,255,255, 0.4) !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+   background-color: #fff;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+ background-color: transparent;
+ color: #ffffff;
 }
 
 .save-button {
   background-color: #ffffff;
   border: solid 1px #FF0059;
+  color: #FF0059;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  letter-spacing: 2px;
+  margin: 30px 0px 15px 0px;
+}
+
+.save-button:hover {
+  color: #ffffff;
+  background-color: #FF0059;
 }

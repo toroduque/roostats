@@ -1,16 +1,17 @@
 <% @page_title = "Earnings History"  %>
 
-<%= link_to("<< Back to main menu", riders_path) %> <br>
+<%= link_to("Back to main menu", riders_path, :class => 'back-link') %>
+<br>
 
-<div class="earnings index">
-  <h2>All Riders</h2>
+<div class="earnings-index">
+  <p>Your Earnings</p>
 
-  <%= link_to("Add New Earning", new_earning_path(:rider_id => @rider.id)) %>
+  <%= link_to("Add new record", new_earning_path(:rider_id => @rider.id), :class => "add-new-record") %>
 
   <table class="table" summary="Earnings list">
     <tr>
       <th>Date</th>
-      <th>Worked Hours</th>
+      <th>Hours</th>
       <th>Orders</th>
       <th>Tips</th>
       <th>Total</th>

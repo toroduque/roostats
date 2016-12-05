@@ -4,7 +4,7 @@
 
 <div class="form-background">
   <div class="form-main">
-    <h2>Record new earnings</h2>
+    <p>Record new earnings</p>
 
       <%= form_for(@earning, :url => earnings_path(:rider_id => @rider.id), :method => 'post', :class => 'form-group') do |f| %>
 
@@ -12,7 +12,7 @@
         <%= render( :partial => 'form', :locals => { :f => f }) %>
 
         <div class="form-buttons">
-          <%= f.submit ("Save")  %>
+          <%= f.submit "Save", :class => "save-button"  %>
         </div>
       </form>
 
