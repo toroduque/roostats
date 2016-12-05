@@ -4,10 +4,10 @@
 <%= link_to("<< Back to list", riders_path, :class => 'back-link') %>
 <br />
 
-<div class="rider delete">
-  <h2>Delete Rider</h2>
+<div class="form-main">
+  <p>Delete Rider</p>
 
-  <%= form_for(@rider, :method => 'delete') do |f| %>
+  <%= form_for(@rider, :method => 'delete', :class => 'form-group') do |f| %>
 
     <p>
       Are you sure you want to permanently delete your account?
@@ -17,7 +17,7 @@
     </p>
 
     <div class="form-buttons">
-      <%= f.submit("Delete Rider") %>
+      <%= f.submit "Delete Rider", :class => "save-button" %>
     </div>
   <% end %>
 </div>

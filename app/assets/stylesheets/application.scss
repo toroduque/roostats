@@ -96,6 +96,7 @@
 
     th {
       color: #8D8D8D;
+      text-align: center;
     }
     td {
       color: #545DF1;
@@ -112,7 +113,7 @@
 
 .form-main {
   background-color: #ffffff;
-  padding: 15px 30px;
+  padding: 18px 30px;
 
   p {
     border-bottom: 1px solid #c2c2c2;
@@ -192,6 +193,52 @@
   background-color: #FF0059;
 }
 
+.select-signup {
+  text-align: center;
+
+  img {
+    margin: 45px 25px;
+  }
+
+  input[type='radio'] {
+    -webkit-appearance:none;
+    width:14px;
+    height:14px;
+    border:1px solid gray;
+    border-radius:50%;
+    outline:none;
+    box-shadow:0 0 1px 0px gray inset;
+  }
+
+  input[type='radio']:hover {
+    border:1px solid #AB25A2;
+    box-shadow:0 0 1px 0px #AB25A2 inset;
+  }
+
+  input[type='radio']:before {
+    content:'';
+    display:block;
+    width:50%;
+    height:50%;
+    margin: 22% auto;
+    border-radius:50%;
+  }
+
+  input[type='radio']:checked {
+    border:1px solid #AB25A2;
+  }
+
+  input[type='radio']:checked:before {
+    background: #AB25A2;
+    border:1px solid #AB25A2;
+  }
+
+  p {
+    border-bottom: none;
+    margin: 5px;
+  }
+
+}
 
 @media screen and (max-width: 470px) {
     .hide-column {
