@@ -43,6 +43,20 @@
    font-family: 'Muli', Arial, sans-serif;
  }
 
+ table {
+   margin-top: 15px;
+   text-align: center;
+   overflow: auto;
+   table-layout: fixed;
+
+   th {
+     color: #8D8D8D;
+   }
+   td {
+     color: #545DF1;
+   }
+ }
+
  .back-link {
    color: #a4a4a4;
 
@@ -63,14 +77,22 @@
   }
 
   .add-new-record {
-    color: #777575;
-    letter-spacing: 2px;
-    font-weight: 300;
+    a {
+      color: #777575;
+      letter-spacing: 2px;
+      font-weight: 300;
+    }
+
+    img {
+      margin: 2px 10px;
+    }
   }
 
   table {
     margin-top: 15px;
     text-align: center;
+    overflow: auto;
+    table-layout: fixed;
 
     th {
       color: #8D8D8D;
@@ -109,7 +131,7 @@
     text-transform: uppercase;
   }
 
-  input[type="number"], input[type="date"] {
+  input[type="number"], input[type="date"], input[type="text"], input[type="password"] {
     border: 1px solid #ffffff;
     border-bottom: 1px solid #AB25A2;
     -webkit-box-shadow: none;
@@ -168,4 +190,11 @@
 .save-button:hover {
   color: #ffffff;
   background-color: #FF0059;
+}
+
+
+@media screen and (max-width: 470px) {
+    .hide-column {
+        display: none;
+    }
 }

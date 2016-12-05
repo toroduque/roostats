@@ -6,14 +6,19 @@
 <div class="earnings-index">
   <p>Your Earnings</p>
 
-  <%= link_to("Add new record", new_earning_path(:rider_id => @rider.id), :class => "add-new-record") %>
+  <%= link_to new_earning_path(:rider_id => @rider.id) do %>
+    <div class="add-new-record">
+      <%= image_tag("addNewRecord.svg", :alt => "Add New Record") %>
+      <%= link_to("Add new record", new_earning_path(:rider_id => @rider.id)) %>
+    </div>
+  <% end %>
 
   <table class="table" summary="Earnings list">
     <tr>
       <th>Date</th>
       <th>Hours</th>
-      <th>Orders</th>
-      <th>Tips</th>
+      <th class="hide-column">Orders</th>
+      <th class="hide-column">Tips</th>
       <th>Total</th>
       <th>Avg Hour</th>
       <th>Actions</th>
@@ -22,8 +27,8 @@
     <tr>
       <td><%= earning.earnings_date %></td>
       <td><%= earning.hours %></td>
-      <td><%= earning.orders %></td>
-      <td><%= earning.tips %></td>
+      <td class="hide-column"><%= earning.orders %></td>
+      <td class="hide-column"><%= earning.tips %></td>
       <td><%= (earning.hours * 16) + (earning.orders * 2.5) + (earning.tips) %></td>
       <td><%= ((earning.hours * 16) + (earning.orders * 2.5) + (earning.tips)) / earning.hours %></td>
       <td>
@@ -33,5 +38,4 @@
     </tr>
     <% end %>
   </table>
-
 </div>

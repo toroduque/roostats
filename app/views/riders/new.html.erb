@@ -2,15 +2,15 @@
 
 <%= link_to("<< Back to List", riders_path, :class => 'back-link') %>
 
-<div class="riders new">
-  <h2>New Rider Sign Up</h2>
+<div class="form-main">
+  <p>New Rider Sign Up</p>
 
-  <%= form_for(@rider, :url => riders_path) do |f| %>
+  <%= form_for(@rider, :url => riders_path, :class => 'form-group') do |f| %>
 
   <%= render( :partial => 'form', :locals => { :f => f }) %>
 
   <div class="form-buttons">
-    <%= f.submit("Sign Up!") %>
+    <%= f.submit "Sign Up!", :class => "save-button" %>
   </div>
   <% end %>
 </div>
