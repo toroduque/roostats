@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :riders
   root 'riders#index'
 
   resources :earnings do
