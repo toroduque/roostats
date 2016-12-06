@@ -4,15 +4,17 @@
 <%= link_to("<< Back to list", earnings_path(:rider_id => @rider.id), :class => 'back-link') %>
 <br />
 
-<div class="form-main">
-  <p>Update Record</p>
+<div class="form-background">
+  <div class="form-main">
+    <p>Update Record</p>
 
-  <%= form_for(@earning, :url => earning_path(@earning, :rider_id => @rider.id), :class => 'form-group') do |f| %>
+    <%= form_for(@earning, :url => earning_path(@earning, :rider_id => @rider.id), :class => 'form-group') do |f| %>
 
-  <%= render( :partial => 'form', :locals => { :f => f }) %>
+    <%= render( :partial => 'form', :locals => { :f => f }) %>
 
-  <div class="form-buttons">
-    <%= f.submit "Update record", :class => "save-button" %>
+    <div class="form-buttons">
+      <%= f.submit "Update record", :class => "save-button" %>
+    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
