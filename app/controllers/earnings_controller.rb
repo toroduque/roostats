@@ -1,5 +1,6 @@
 class EarningsController < ApplicationController
 
+  before_action :authenticate_rider! 
   before_action :find_rider
   before_action :find_riders, :only => [ :new, :create, :edit, :update ]
 

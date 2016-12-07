@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
 
   devise_for :riders
-  root 'riders#index'
+
+  root 'public#index'
+
+  get 'public/index'
+
+  get 'public/about'
+
+  get 'public/tips'
+
+  get 'public/contact'
 
   resources :earnings do
     member do
@@ -13,7 +22,6 @@ Rails.application.routes.draw do
   resources :riders do
     member do
       get :delete
-      get :signup
       get :profile
     end
   end

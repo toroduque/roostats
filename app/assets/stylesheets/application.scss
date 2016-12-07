@@ -54,6 +54,9 @@
    }
    td {
      color: #545DF1;
+     word-break: break-all;
+
+     a { word-break: keep-all;}
    }
  }
 
@@ -65,6 +68,14 @@
    }
  }
 
+ .container:first-child {
+   padding: 25px 35px;
+ }
+
+ .container {
+   padding: 0px 25px;
+ }
+
 .earnings-index{
 
   p {
@@ -72,10 +83,11 @@
     border-bottom: 1px solid #c2c2c2;
     color: #777575;
     font-size: 16px;
-    padding: 15px 0px;
+    padding: 15px 15px;
     margin: 15px 0px;
   }
 
+  //earnings-index
   .add-new-record {
     a {
       color: #777575;
@@ -88,6 +100,7 @@
     }
   }
 
+  //earnings-index
   table {
     margin-top: 15px;
     text-align: center;
@@ -115,6 +128,7 @@
   background-color: #ffffff;
   padding: 18px 30px;
 
+  //form-main
   p {
     border-bottom: 1px solid #c2c2c2;
     color: #777575;
@@ -122,7 +136,7 @@
     padding-bottom: 15px;
     margin-bottom: 45px;
   }
-
+  //form-main
   label {
     color: #a3a3a3;
     font-weight: normal;
@@ -131,7 +145,7 @@
     letter-spacing: 2px;
     text-transform: uppercase;
   }
-
+  //form-main
   input[type="number"], input[type="date"], input[type="text"], input[type="password"] {
     border: 1px solid #ffffff;
     border-bottom: 1px solid #AB25A2;
@@ -141,21 +155,38 @@
     font-weight: 300;
     padding: 15px 1px;
   }
+} // END form-main
+
+.landing-section {
+  text-align: center;
+  color: #ffffff;
+  padding: 10%;
+
+  h1 { font-weight: 600; margin-bottom: 40px; }
+  p  { font-size: 18px; margin-bottom: 40px; font-weight: 200;}
+  a  { border: 1px solid #ffffff; color: #ffffff; font-family: 'Muli', Arial, sans-serif; font-size: 16px; font-weight: 300; text-transform: uppercase; padding: 1% 32%; }
+}
+
+.navbar {
+    border-radius: 0px;
 }
 
 .navbar-default  {
   color: #ffffff;
   background: linear-gradient(to right, #FF0059, #9C2BB0);
+  border: none;
 }
 
 .navbar-default .navbar-brand {
   color: #ffffff;
   font-weight: bold;
   letter-spacing: 2px;
+  font-size: 20px;
 }
 
  .navbar-default .navbar-nav > li > a {
   color: #ffffff;
+  font-size: 16px;
 }
 
 .navbar-default .navbar-toggle {
@@ -174,6 +205,23 @@
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
  background-color: transparent;
  color: #ffffff;
+}
+
+#navbar-public {
+  background: rgba(220,220,220, 0.3) !important;
+}
+
+.public-index {
+  background: image-url("homeBackground.jpg") no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.public-about {
+  img { margin-top: -25px;}
+  h2 { font-weight: 600; text-align: center; margin-top: 25px; padding-bottom: 50px; border-bottom: 1px solid #AB25A2;}
+  p { font-size: 18px; line-height: 30px; margin-top: 50px;}
 }
 
 .save-button {

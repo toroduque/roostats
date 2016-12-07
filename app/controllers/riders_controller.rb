@@ -1,5 +1,7 @@
 class RidersController < ApplicationController
 
+  before_action :authenticate_rider! 
+
   def index
     @contracts = Contract.all
     @riders = Rider.sorted
