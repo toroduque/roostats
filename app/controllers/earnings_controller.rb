@@ -20,7 +20,7 @@ class EarningsController < ApplicationController
   def create
     @earning = Earning.new(earning_params)
     @earning.rider_id = @rider.id
-    @earning.total_earnings = (@earning.hours * @rider.contract.salary_hour) + (@earning.orders * 2.5) + (@earning.tips)
+    @earning.total_earnings = (@earning.hours.to_f * @rider.contract.salary_hour.to_f) + (@earning.orders.to_f * 2.5) + (@earning.tips.to_f)
     if @earning.save
       flash[:notice] = "Earning recorded successfuly"
       redirect_to(earnings_path(:rider_id => @rider.id))
