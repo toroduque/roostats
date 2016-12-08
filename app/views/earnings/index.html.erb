@@ -1,5 +1,6 @@
 <% @page_title = "Earnings History"  %>
 
+
 <%= link_to("Back to main menu", riders_path, :class => 'back-link') %>
 <br>
 
@@ -12,6 +13,16 @@
       <%= link_to("Add new record", new_earning_path(:rider_id => @rider.id)) %>
     </div>
   <% end %>
+
+  <div class="earnings-stats-bg">
+    <div class="earnings-stats">
+      <center>
+        <h4>Earnings to date</h4>
+        <h4><%= Time.now.strftime("%d/%m/%Y") %></h4>
+        <h2><%= @totalEarnings %></h2>
+      </center>
+    </div>
+  </div>
 
   <table class="table" summary="Earnings list">
     <tr>
@@ -29,8 +40,8 @@
       <td><%= earning.hours %></td>
       <td class="hide-column"><%= earning.orders %></td>
       <td class="hide-column"><%= earning.tips %></td>
-      <td><%= (earning.hours * 16) + (earning.orders * 2.5) + (earning.tips) %></td>
-      <td><%= ((earning.hours * 16) + (earning.orders * 2.5) + (earning.tips)) / earning.hours %></td>
+      <td><%= earning.total_earnings %></td>
+      <td><%= earning.total_earnings %></td>
       <td>
         <%= link_to("Edit", edit_earning_path(earning, :rider_id => @rider.id), :class => 'action edit') %>
         <%= link_to("Delete", delete_earning_path(earning, :rider_id => @rider.id), :class => 'action delete') %>

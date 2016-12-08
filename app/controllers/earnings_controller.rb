@@ -1,11 +1,12 @@
 class EarningsController < ApplicationController
 
-  before_action :authenticate_rider! 
+  before_action :authenticate_rider!
   before_action :find_rider
   before_action :find_riders, :only => [ :new, :create, :edit, :update ]
 
   def index
     @earnings = @rider.earnings.sorted
+    @totalEarnings = @earnings.sum(:total_earnings)
   end
 
   def show
@@ -19,6 +20,7 @@ class EarningsController < ApplicationController
   def create
     @earning = Earning.new(earning_params)
     @earning.rider_id = @rider.id
+    @earning.total_earnings = (@earning.hours * @rider.contract.salary_hour) + (@earning.orders * 2.5) + (@earning.tips)
     if @earning.save
       flash[:notice] = "Earning recorded successfuly"
       redirect_to(earnings_path(:rider_id => @rider.id))
@@ -34,6 +36,7 @@ class EarningsController < ApplicationController
 
   def update
     @earning = Earning.find(params[:id])
+    @earning.total_earnings = (@earning.hours * @rider.contract.salary_hour) + (@earning.orders * 2.5) + (@earning.tips)
     if @earning.update_attributes(earning_params)
       flash[:notice] = "Record edited successfuly"
       redirect_to(earnings_path(@earning, :rider_id => @rider.id))
@@ -69,7 +72,7 @@ class EarningsController < ApplicationController
   end
 
   def earning_params
-    params.require(:earning).permit(:rider_id,:earnings_date, :hours, :orders, :tips)
+    params.require(:earning).permit(:rider_id,:earnings_date, :hours, :orders, :tips, :total_earnings)
   end
 
 end
