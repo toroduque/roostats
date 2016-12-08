@@ -1,6 +1,7 @@
 class RidersController < ApplicationController
 
   before_action :authenticate_rider!, :except => [:new, :create]
+  layout 'public', :only => [:new]
 
   def index
     @contracts = Contract.all
