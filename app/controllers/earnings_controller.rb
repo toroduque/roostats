@@ -20,6 +20,7 @@ class EarningsController < ApplicationController
   def create
     @earning = Earning.new(earning_params)
     @earning.rider_id = @rider.id
+    @contractType = @rider.contract.salary_hour
     @earning.total_earnings = (@earning.hours.to_f * @rider.contract.salary_hour.to_f) + (@earning.orders.to_f * 2.5) + (@earning.tips.to_f)
     if @earning.save
       flash[:notice] = "Earning recorded successfuly"
@@ -36,7 +37,8 @@ class EarningsController < ApplicationController
 
   def update
     @earning = Earning.find(params[:id])
-    @earning.total_earnings = ((@earning.hours * @rider.contract.salary_hour) + (@earning.orders * 2.5) + (@earning.tips))
+    @contractType = @rider.contract.salary_hour
+    @earning.total_earnings = ((@earning.hours * @contractType) + (@earning.orders * 2.5) + (@earning.tips))
     if @earning.update_attributes(earning_params)
       flash[:notice] = "Record edited successfuly"
       redirect_to(earnings_path(@earning, :rider_id => @rider.id))
