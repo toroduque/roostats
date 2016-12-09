@@ -4,7 +4,7 @@
 <%= link_to("<< Back to list", earnings_path(:rider_id => @rider.id), :class => 'back-link') %>
 <br />
 
-<div class="rider delete">
+<div class="form-main">
   <h2>Delete Record</h2>
 
   <%= form_for(@earning, :url => earning_path(@earning, :rider_id => @rider.id), :method => 'delete') do |f| %>
@@ -17,7 +17,7 @@
     </p>
 
     <div class="form-buttons">
-      <%= f.submit("Delete Record") %>
+      <%= f.submit "Delete Record", :class => "save-button" %>
     </div>
   <% end %>
 </div>
