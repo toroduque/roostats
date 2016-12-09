@@ -36,7 +36,7 @@ class EarningsController < ApplicationController
 
   def update
     @earning = Earning.find(params[:id])
-    @earning.total_earnings = ((@earning.hours * @rider.contract.salary_hour.to_f) + (@earning.orders * 2.5) + (@earning.tips))
+    @earning.total_earnings = ((@earning.hours * @rider.contract.salary_hour).to_f + (@earning.orders * 2.5) + (@earning.tips))
     if @earning.update_attributes(earning_params)
       flash[:notice] = "Record edited successfuly"
       redirect_to(earnings_path(@earning, :rider_id => @rider.id))
