@@ -14,6 +14,7 @@
       <th>City</th>
       <th>Vehicle</th>
       <th>Contract Type</th>
+      <th>Contract Salary</th>
       <th>Actions</th>
     </tr>
     <% @riders.each do |rider| %>
@@ -25,6 +26,7 @@
       <td><%= rider.city %></td>
       <td><%= rider.contract.vehicle %></td>
       <td><%= rider.contract.contract_type%></td>
+      <td><%= rider.contract.salary_hour%></td>
       <td>
         <%= link_to("View Earnings", earnings_path(:rider_id => rider.id), :class => 'action show') %>
         <%= link_to("Profile", profile_rider_path(rider), :class => 'action show') %>

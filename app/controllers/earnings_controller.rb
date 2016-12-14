@@ -20,8 +20,17 @@ class EarningsController < ApplicationController
   def create
     @earning = Earning.new(earning_params)
     @earning.rider_id = @rider.id
-    @contractType = @rider.contract.salary_hour
-    @earning.total_earnings = (@earning.hours.to_f * @rider.contract.salary_hour.to_f) + (@earning.orders.to_f * 2.5) + (@earning.tips.to_f)
+
+    if @rider.contract.vehicle == "Bicycle" && @rider.contract.contract_type == "Hourly"
+      @earning.total_earnings = (@earning.hours * 16) + (@earning.orders.to_f * 2.5) + (@earning.tips)
+    elsif @rider.contract.vehicle == "Bicycle" && @rider.contract.contract_type == "Drop-off"
+      @earning.total_earnings =  (@earning.orders.to_f * 9) + (@earning.tips)
+    elsif @rider.contract.vehicle == "Scooter" && @rider.contract.contract_type == "Hourly"
+      @earning.total_earnings = (@earning.hours * 17) + (@earning.orders.to_f * 2.5) + (@earning.tips)
+    elsif @rider.contract.vehicle == "Scooter" && @rider.contract.contract_type == "Drop-off"
+      @earning.total_earnings = (@earning.orders.to_f * 10) + (@earning.tips)
+    end
+
     if @earning.save
       flash[:notice] = "Earning recorded successfuly"
       redirect_to(earnings_path(:rider_id => @rider.id))
@@ -37,8 +46,17 @@ class EarningsController < ApplicationController
 
   def update
     @earning = Earning.find(params[:id])
-    @contractType = @rider.contract.salary_hour
-    @earning.total_earnings = ((@earning.hours * @contractType) + (@earning.orders * 2.5) + (@earning.tips))
+
+    if @rider.contract.vehicle == "Bicycle" && @rider.contract.contract_type == "Hourly"
+      @earning.total_earnings = (@earning.hours * 16) + (@earning.orders.to_f * 2.5) + (@earning.tips)
+    elsif @rider.contract.vehicle == "Bicycle" && @rider.contract.contract_type == "Drop-off"
+      @earning.total_earnings = (@earning.hours) + (@earning.orders.to_f * 9) + (@earning.tips)
+    elsif @rider.contract.vehicle == "Scooter" && @rider.contract.contract_type == "Hourly"
+      @earning.total_earnings = (@earning.hours * 17) + (@earning.orders.to_f * 2.5) + (@earning.tips)
+    elsif @rider.contract.vehicle == "Scooter" && @rider.contract.contract_type == "Drop-off"
+      @earning.total_earnings = (@earning.hours) + (@earning.orders.to_f * 10) + (@earning.tips)
+    end
+
     if @earning.update_attributes(earning_params)
       flash[:notice] = "Record edited successfuly"
       redirect_to(earnings_path(@earning, :rider_id => @rider.id))

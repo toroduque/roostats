@@ -28,7 +28,7 @@
             <ul class="nav navbar-nav pull-right">
               <li><%= link_to("About", '/public/about') %></li>
               <li><%= link_to("Tips", '/public/tips') %></li>
-              <li><%= link_to("Contact", '/public/contact') %></li>
+              <li><%= link_to("Contact", new_message_path) %></li>
               <li><%= link_to("Login", rider_session_path ) %></li>
               <li><%= link_to("Sign Up", new_rider_path) %></li>
             </ul>
@@ -51,17 +51,17 @@
           <center>
           <div class="row">
             <div class="col-sm-4">
-              <%= image_tag("dropOff.svg", :alt => "Roostats") %>
+              <%= image_tag("dropOffLarge.svg", :alt => "Roostats") %>
               <h3>Beautiful Title</h3>
               <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.  </p>
             </div>
             <div class="col-sm-4">
-              <%= image_tag("hourly.svg", :alt => "Roostats") %>
+              <%= image_tag("stats.svg", :alt => "Roostats") %>
               <h3>Beautiful Title</h3>
               <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.  </p>
             </div>
             <div class="col-sm-4">
-              <%= image_tag("scooter.svg", :alt => "Roostats") %>
+              <%= image_tag("tips.svg", :alt => "Roostats") %>
               <h3>Beautiful Title</h3>
               <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.  </p>
             </div>

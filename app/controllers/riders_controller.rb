@@ -18,8 +18,8 @@ class RidersController < ApplicationController
   end
 
   def create
-    @rider = Rider.new(rider_params)
-    assign_contract_salaries(@rider.contract.vehicle)
+    @rider = Rider.new(rider_params, :salary_hour => 16, :salary_dropoff => 9)
+    @rider.contract.salary_hour = 16
     if @rider.save
       flash[:notice] = "Success!"
       redirect_to riders_path
@@ -27,6 +27,7 @@ class RidersController < ApplicationController
     puts @rider.contract.errors.full_messages
     render 'new'
     end
+
   end
 
   def edit
@@ -65,11 +66,11 @@ class RidersController < ApplicationController
 
   def assign_contract_salaries(vehicle_type)
     if vehicle_type == 'Bicycle'
-      then @rider.contract.salary_hour = 16
-           @rider.contract.salary_dropoff = 9
+        @rider.contract.salary_hour = 16
+        @rider.contract.salary_dropoff = 9
     elsif vehicle_type == 'Scooter'
-      then @rider.contract.salary_hour = 17
-           @rider.contract.salary_dropoff = 10
+        @rider.contract.salary_hour = 17
+        @rider.contract.salary_dropoff = 10
     end
   end
 

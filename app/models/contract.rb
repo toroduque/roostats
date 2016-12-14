@@ -1,6 +1,7 @@
 class Contract < ApplicationRecord
 
   belongs_to :rider, required: false
+  has_many :salaries
 
   scope :sorted, lambda { order("created_at ASC") }
 

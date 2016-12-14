@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="141px" height="126px" viewBox="0 0 141 126" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-40.000000, -47.000000)">
+            <g id="Group-5" transform="translate(43.000000, 45.000000)">
+                <path d="M28.6107796,86.7815306 L25.1595906,84.0194327 C25.1595906,84.0194327 16.2361384,72.089801 14.716195,70.4053687 C13.1962515,68.7209364 6.23186171,64.1554209 2.68254007,67.3758865 C-0.866781561,70.5963522 0.443262411,76.1753941 0.443262411,76.1753941 L16.4323287,101.590545 L22.596351,107.56906 C22.596351,107.56906 51.7025898,122.903032 60.1660892,124.438066 C67.583921,125.783446 96.6958153,115.842129 101.534719,115.842129 C106.373623,115.842129 125.505596,124.438066 125.505596,124.438066 L134.277344,95.4084977 C134.277344,95.4084977 111.788702,92.7509281 109.098575,91.3512612 C106.408447,89.9515942 103.247243,87.7763464 100.484841,85.0449474 C97.7224384,82.3135484 84.1685414,78.3921241 78.3024871,79.5419718 C71.9069668,80.7956039 76.2402128,80.9145813 63.3982103,82.5594149 C50.5562078,84.2042485 48.2680484,86.3751604 35.3381254,85.0449474 C34.4033236,84.9487763 27.1679871,82.7268666 27.1679871,90.3140999 C27.1679871,97.9013333 32.1429137,100.316027 35.3381254,101.590545 C41.4376435,104.023543 59.204403,97.3053283 67.2421621,99.5356787 C75.2799213,101.766029 72.914765,99.5356787 72.914765,99.5356787" id="Path-10" stroke="#979797" stroke-width="5"></path>
+                <g id="Group-4" transform="translate(64.494681, 16.179078) rotate(-60.000000) translate(-64.494681, -16.179078) translate(54.078014, 3.989362)">
+                    <g id="Group-3">
+                        <ellipse id="Oval-3" stroke="#979797" stroke-width="3" fill="#F3F3F3" cx="9.97740964" cy="12.1897163" rx="9.97740964" ry="12.1897163"></ellipse>
+                        <ellipse id="Oval-3" stroke="#979797" stroke-width="3" fill="#FFFFFF" cx="10.8559237" cy="12.1897163" rx="9.97740964" ry="12.1897163"></ellipse>
+                        <ellipse id="Oval-3" stroke="#979797" stroke-width="2" cx="10.9814257" cy="12.1265572" rx="9.09889558" ry="11.1160107"></ellipse>
+                        <g id="Group-2" transform="translate(11.815881, 12.297661) scale(-1, 1) translate(-11.815881, -12.297661) translate(6.939994, 7.200143)">
+                            <g id="Group">
+                                <polygon id="Rectangle" fill="#E2E1E2" transform="translate(2.386473, 7.471107) rotate(-12.000000) translate(-2.386473, -7.471107) " points="0.399124934 5.47735902 4.37382042 5.47735902 4.32320576 9.46485589 0.399124934 8.62527219"></polygon>
+                                <polygon id="Rectangle" fill="#F1F1F0" transform="translate(5.251206, 5.126868) rotate(-12.000000) translate(-5.251206, -5.126868) " points="3.88925042 0.84684977 6.53459812 0.84684977 6.636502 9.40688568 3.86591039 8.81180816"></polygon>
+                                <polygon id="Rectangle" fill="#BDBEBE" transform="translate(7.809107, 4.659982) rotate(6.000000) translate(-7.809107, -4.659982) " points="6.49448967 0.13694435 9.13983737 0.13694435 9.12709208 8.89650803 6.47837585 9.18301883"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="Group-4" transform="translate(36.569149, 23.271277) rotate(-345.000000) translate(-36.569149, -23.271277) translate(19.946809, 3.989362)">
+                    <g id="Group-3" transform="translate(0.000000, 0.000000)">
+                        <ellipse id="Oval-3" stroke="#979797" stroke-width="3" fill="#F3F3F3" cx="15.9213984" cy="19.2819149" rx="15.9213984" ry="19.2819149"></ellipse>
+                        <ellipse id="Oval-3" stroke="#979797" stroke-width="3" fill="#FFFFFF" cx="17.3232825" cy="19.2819149" rx="15.9213984" ry="19.2819149"></ellipse>
+                        <ellipse id="Oval-3" stroke="#979797" stroke-width="2" cx="17.5235517" cy="19.1820086" rx="14.5195142" ry="17.5835079"></ellipse>
+                        <g id="Group-2" transform="translate(18.878706, 19.368041) scale(-1, 1) translate(-18.878706, -19.368041) translate(11.121614, 11.389318)">
+                            <g id="Group" transform="translate(0.000000, -0.000000)">
+                                <polygon id="Rectangle" fill="#E2E1E2" transform="translate(3.808201, 11.817934) rotate(-12.000000) translate(-3.808201, -11.817934) " points="0.636901491 8.66418609 6.97950067 8.66418609 6.8987326 14.9716811 0.636901491 13.6436124"></polygon>
+                                <polygon id="Rectangle" fill="#F1F1F0" transform="translate(8.379584, 8.109773) rotate(-12.000000) translate(-8.379584, -8.109773) " points="6.20625067 1.33956236 10.4275502 1.33956236 10.5901628 14.8799828 6.16900593 13.9386784"></polygon>
+                                <polygon id="Rectangle" fill="#BDBEBE" transform="translate(12.461340, 7.371244) rotate(6.000000) translate(-12.461340, -7.371244) " points="10.3635473 0.216621063 14.5848469 0.216621063 14.5645086 14.0726582 10.3378338 14.5258661"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="Group-4" transform="translate(55.407801, 55.851064) rotate(-15.000000) translate(-55.407801, -55.851064) translate(36.347518, 33.687943)">
+                    <g id="Group-3">
+                        <ellipse id="Oval-3" stroke="#979797" stroke-width="3" fill="#F3F3F3" cx="18.2565368" cy="22.1631206" rx="18.2565368" ry="22.1631206"></ellipse>
+                        <ellipse id="Oval-3" stroke="#979797" stroke-width="3" fill="#FFFFFF" cx="19.8640306" cy="22.1631206" rx="18.2565368" ry="22.1631206"></ellipse>
+                        <ellipse id="Oval-3" stroke="#979797" stroke-width="2" cx="20.0936726" cy="22.0482857" rx="16.649043" ry="20.2109286"></ellipse>
+                        <g id="Group-2" transform="translate(21.677134, 22.178049) scale(-1, 1) translate(-21.677134, -22.178049) translate(12.811886, 13.091170)">
+                            <g id="Group">
+                                <polygon id="Rectangle" fill="#E2E1E2" transform="translate(4.366737, 13.583832) rotate(-12.000000) translate(-4.366737, -13.583832) " points="0.73031371 9.95883458 8.00316076 9.95883458 7.91054671 17.2088289 0.73031371 15.6823131"></polygon>
+                                <polygon id="Rectangle" fill="#F1F1F0" transform="translate(9.608590, 9.321578) rotate(-12.000000) translate(-9.608590, -9.321578) " points="7.11650077 1.53972685 11.9569242 1.53972685 12.1433866 17.1034285 7.07379347 16.0214694"></polygon>
+                                <polygon id="Rectangle" fill="#BDBEBE" transform="translate(14.289004, 8.472694) rotate(6.000000) translate(-14.289004, -8.472694) " points="11.8835343 0.248989727 16.7239577 0.248989727 16.7006366 16.1754691 11.8540494 16.6963979"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

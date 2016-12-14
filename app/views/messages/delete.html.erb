@@ -1,0 +1,27 @@
+<% @page_title = "Delete Message" %>
+
+<br />
+<%= link_to("<< Back to list", messages_path, :class => 'back-link') %>
+<br />
+
+<div class="form-main">
+  <p>Delete Message</p>
+
+  <%= form_for(@message, :method => 'delete', :class => 'form-group') do |f| %>
+
+    <p>
+      Are you sure you want to permanently delete your account?
+    </p>
+    <div class="">
+      <label>From</label>
+      <p class="reference-name"><%= f.object.name %></p>
+      <label>Subject</label>
+      <p class="reference-name"><%= f.object.subject %></p>
+    </div>
+
+
+    <div class="form-buttons">
+      <%= f.submit "Delete Message", :class => "save-button" %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,31 @@
+<% @page_title = "Rider Profile #{@message.subject}" %>
+
+<%= link_to("<< Back to List", messages_path, :class => 'back-link') %>
+
+<div class="rider profile">
+  <h2>Message</h2>
+
+  <table summary="Rider profile">
+    <tr>
+      <th>Name</th>
+      <td><%= @message.name %></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td><%= @message.email %></td>
+    </tr>
+    <tr>
+      <th>Subject</th>
+      <td><%= @message.subject %></td>
+    </tr>
+    <tr>
+      <th>Message</th>
+      <td><%= @message.message %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @message.created_at %></td>
+    </tr>
+  </table>
+
+</div>

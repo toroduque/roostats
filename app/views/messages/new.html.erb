@@ -1,0 +1,24 @@
+<% @page_title = "Record new earnings" %>
+
+<div class="public">
+  <center>  <%= image_tag("roostats-logo.png", :alt => "Roostats") %> </center>
+  <h2>Give me a shout!</h2>
+  <p>Use the form below to drop me a message.</p>
+</div>
+
+<div class="form-background">
+  <div class="form-main">
+      <%= form_for(@message, :url => messages_path, :method => 'post', :class => 'form-group') do |f| %>
+
+      <form>
+        <%= render( :partial => 'form', :locals => { :f => f }) %>
+
+        <div class="form-buttons">
+          <%= f.submit "Send", :class => "save-button"  %>
+        </div>
+      </form>
+
+      <% end %>
+
+  </div>
+</div>

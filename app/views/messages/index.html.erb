@@ -1,0 +1,32 @@
+<% @page_title = "Inbox"  %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="Messages Inbox">
+  <h2>All Riders</h2>
+
+  <table class="table" summary="Rider list">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Subject</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+    <% @messages.each do |message| %>
+    <tr>
+      <td><%= message.name %></td>
+      <td><%= message.email %></td>
+      <td><%= message.subject %></td>
+      <td><%= message.created_at %></td>
+      <td>
+        <%= link_to("View Message", message_path(message), :class => 'action show') %>
+        <%= link_to("Delete", delete_message_path(message), :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+
+</div>

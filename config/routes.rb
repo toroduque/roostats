@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   devise_for :riders
 
   root 'public#index'
@@ -11,6 +12,13 @@ Rails.application.routes.draw do
   get 'public/tips'
 
   get 'public/contact'
+
+
+  resources :messages do
+    member do
+      get :delete
+    end
+  end
 
   resources :earnings do
     member do
