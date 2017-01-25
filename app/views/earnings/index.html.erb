@@ -41,7 +41,7 @@
       <td class="hide-column"><%= earning.orders %></td>
       <td class="hide-column"><%= earning.tips %></td>
       <td><%= earning.total_earnings %></td>
-      <td><%= earning.total_earnings %></td>
+      <td><%= earning.total_earnings / earning.hours %></td>
       <td>
         <%= link_to("Edit", edit_earning_path(earning, :rider_id => @rider.id), :class => 'action edit') %>
         <%= link_to("Delete", delete_earning_path(earning, :rider_id => @rider.id), :class => 'action delete') %>
